@@ -5,7 +5,7 @@ from semantic_release.history import (evaluate_version_bump, get_current_version
                                       get_previous_version)
 from semantic_release.history.logs import generate_changelog, markdown_changelog
 
-from . import mock
+import mock
 
 MAJOR = (
     '221',

@@ -4,7 +4,7 @@ from semantic_release.errors import ImproperConfigurationError
 from semantic_release.history import parser_angular
 from semantic_release.settings import _config, current_commit_parser
 
-from . import mock
+import mock
 
 
 class ConfigTests(TestCase):

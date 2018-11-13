@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from semantic_release.pypi import upload_to_pypi
 
-from . import mock
+import mock
 
 
 class PypiTests(TestCase):

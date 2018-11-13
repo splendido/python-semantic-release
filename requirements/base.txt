@@ -1,7 +1,7 @@
-click==6.2
-gitpython==2.1.10
-invoke==0.11.1
-semver==2.2.1
-twine==1.11.0
-requests==2.9.1
-wheel
+click==7.0
+gitpython==2.1.11
+invoke==1.2.0
+semver==2.8.1
+twine==1.12.1
+requests==2.20.1
+wheel==0.30.0

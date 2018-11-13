@@ -1,5 +1,6 @@
 import re
-from setuptools import find_packages, setup
+# from setuptools import find_packages, setup
+from setuptools import setup
 import sys
 
 
@@ -36,7 +37,9 @@ setup(
     author_email='me@rolflekang.com',
     description='Automatic semantic versioning for python projects',
     long_description=_read_long_description(),
-    packages=find_packages(exclude='tests'),
+    python_requires='>3.5.2',
+    # packages=find_packages(exclude=['tests']),
+    packages=['semantic_release', 'semantic_release.history'],
     license='MIT',
     install_requires=requirements,
     entry_points='''

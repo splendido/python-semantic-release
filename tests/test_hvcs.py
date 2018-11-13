@@ -7,7 +7,7 @@ import responses
 from semantic_release.errors import ImproperConfigurationError
 from semantic_release.hvcs import Github, check_build_status, check_token, get_hvcs
 
-from . import mock
+import mock
 
 
 def test_get_hvcs_should_return_github():
@@ -89,7 +89,7 @@ class GithubReleaseTests(TestCase):
     @mock.patch('semantic_release.hvcs.Github.token', 'super-token')
     def test_should_post_changelog(self):
         def request_callback(request):
-            payload = json.loads(request.body)
+            payload = json.loads(request.body.decode('utf8'))
             self.assertEqual(payload['tag_name'], 'v1.0.0')
             self.assertEqual(payload['body'], 'text')
             self.assertEqual(payload['draft'], False)
